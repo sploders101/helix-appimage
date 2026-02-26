@@ -5,3 +5,4 @@
 !/build.sh
 !/Dockerfile
 !/config.toml
+!/languages.toml

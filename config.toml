@@ -1,13 +1,21 @@
-theme = "onedark-skeys"
+theme = "onedark-glass"
 
 [editor]
 scrolloff = 1
-scroll-lines = 1
+scroll-lines = 2
 shell = ["bash", "-c"]
 auto-format = false
 # idle-timeout = 1000
 color-modes = true
 bufferline = "always"
+end-of-line-diagnostics = "disable"
+
+[editor.inline-diagnostics]
+cursor-line = "disable"
+other-lines = "disable"
+
+[editor.soft-wrap]
+enable = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -18,9 +26,6 @@ select = "underline"
 auto-signature-help = false
 display-signature-help-docs = false
 snippets = false
-
-[editor.explorer]
-column-width = 30
 
 [editor.file-picker]
 hidden = false
@@ -35,6 +40,12 @@ character = "▏"
 "minus" = ["goto_previous_buffer"]
 "=" = ["goto_next_buffer"]
 "C-f" = [":format"]
+"C-r" = [":reload"]
+"C-d" = ["toggle_inlay_diagnostics"]
 
 [keys.insert]
 "A-p" = ["signature_help"]
+"C-d" = ["toggle_inlay_diagnostics"]
+
+[keys.select]
+"C-d" = ["toggle_inlay_diagnostics"]
