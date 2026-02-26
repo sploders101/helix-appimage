@@ -44,7 +44,7 @@ fi
 (
 	echo '#!/bin/bash'
 	echo 'APPDIR="$(dirname "$(readlink -f "${0}")")"'
-	echo "HELIX_RUNTIME=\"\$APPDIR/usr/lib/helix/runtime\" HELIX_CONFIG_DIR=\"$APPDIR/usr/lib/helix\" PATH=\"\$APPDIR/bin:\$APPDIR/node-$NODE_VER-linux-$NODE_ARCH/bin:\$PATH\" \"\$APPDIR/bin/hx\" \"\$@\""
+	echo "HELIX_RUNTIME=\"\$APPDIR/usr/lib/helix/runtime\" HELIX_CONFIG_DIR=\"\$APPDIR/usr/lib/helix\" PATH=\"\$APPDIR/bin:\$APPDIR/node-$NODE_VER-linux-$NODE_ARCH/bin:\$PATH\" \"\$APPDIR/bin/hx\" \"\$@\""
 ) > approot/AppRun
 chmod +x approot/AppRun
 
